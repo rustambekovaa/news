@@ -1,0 +1,39 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        {% for app1 in app1_list %}
+            <div class 'col-12 col-sm-6 col-md-4 col-lg-3 mb-3'>
+                <div class="card">
+                    <img src="{{app1.image.url}}" class='card-img-top' alt="...">
+                    <div class='card-body'>
+                        <h2 class='card-title'>{{ app1.id }}. {{ app1.name }}</h2>
+                        <p class='card-text'>{{ app1.description }}</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        {% empty %}
+            <div class='col-12 text-center'>
+                <h3>No News</h3>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+{% comment %} {% extends 'base.html'%}
+
+{% block content %}
+    <div>
+        {% for app1 in app1_list%}
+            <div class = "col-12 col"> 
+
+            </div>
+        hello world
+    </div>
+{% endblock content %} {% endcomment %}
